@@ -1,0 +1,2700 @@
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="أوسكار ألمع للصوتيات والمرئيات وتجهيز المناسبات باحترافية وهوية مستوحاة من القط العسيري."
+    >
+
+    <title>أوسكار ألمع | للصوتيات والمرئيات والمناسبات</title>
+
+    <style>
+        :root {
+            --home-dark: #10100f;
+            --home-dark-soft: #1c1b19;
+            --home-gold: #c99a45;
+            --home-gold-light: #e4c35f;
+            --home-brown: #76503a;
+            --home-qatt-red: #9f2637;
+            --home-qatt-blue: #27557d;
+            --home-qatt-green: #43876b;
+            --home-beige: #f7f1e7;
+            --home-white: #ffffff;
+            --home-text: #29251f;
+            --home-muted: #756d63;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--home-beige);
+            color: var(--home-text);
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+        }
+
+        .home-container {
+            width: min(1180px, calc(100% - 32px));
+            margin: auto;
+        }
+
+        .home-section {
+            padding: 85px 0;
+        }
+
+        .home-section-title {
+            max-width: 700px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .home-section-title span {
+            color: var(--home-gold);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .home-section-title h2 {
+            margin: 10px 0 14px;
+            font-size: clamp(28px, 4vw, 42px);
+            color: var(--home-dark);
+        }
+
+        .home-section-title p {
+            margin: 0;
+            color: var(--home-muted);
+            line-height: 1.9;
+        }
+
+        /* البنر */
+        .home-hero {
+            min-height: 690px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(9, 9, 8, 0.98) 0%,
+                    rgba(16, 16, 15, 0.88) 48%,
+                    rgba(16, 16, 15, 0.7) 100%
+                ),
+                radial-gradient(circle at 15% 25%, rgba(228, 195, 95, 0.28), transparent 38%),
+                radial-gradient(circle at 72% 20%, rgba(39, 85, 125, 0.22), transparent 40%),
+                radial-gradient(circle at 86% 75%, rgba(159, 38, 55, 0.2), transparent 38%),
+                radial-gradient(circle at 48% 92%, rgba(67, 135, 107, 0.18), transparent 42%),
+                #10100f;
+        }
+
+        .home-hero-video {
+            position: absolute;
+            z-index: 0;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 42%;
+            background: #10100f url("assets/videos/oskar-hero-poster.jpg") center 42% / cover no-repeat;
+            pointer-events: none;
+        }
+
+        .home-hero-video-shade {
+            position: absolute;
+            z-index: 1;
+            inset: 0;
+            background: linear-gradient(90deg,
+                rgba(8, 8, 7, 0.96) 0%,
+                rgba(10, 10, 9, 0.78) 48%,
+                rgba(10, 10, 9, 0.48) 100%);
+            pointer-events: none;
+        }
+
+        .home-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0.38;
+            background:
+                radial-gradient(ellipse at 20% 65%, rgba(118, 80, 58, 0.42), transparent 34%),
+                radial-gradient(ellipse at 58% 35%, rgba(201, 154, 69, 0.25), transparent 32%),
+                radial-gradient(ellipse at 88% 52%, rgba(39, 85, 125, 0.2), transparent 30%);
+            filter: blur(28px);
+            transform: scale(1.08);
+            z-index: 1;
+        }
+
+        .home-hero::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 9px;
+            background: linear-gradient(90deg,
+                var(--home-brown), var(--home-gold), var(--home-qatt-green),
+                var(--home-qatt-blue), var(--home-qatt-red),
+                var(--home-gold-light), var(--home-brown));
+        }
+
+        .home-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 760px;
+            padding: 75px 0;
+        }
+
+        .home-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 10px 17px;
+            margin-bottom: 22px;
+            border: 1px solid rgba(226, 191, 118, 0.28);
+            border-radius: 30px;
+            background: rgba(201, 154, 69, 0.1);
+            color: var(--home-gold-light);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .home-hero-badge::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--home-gold-light);
+            box-shadow: 0 0 0 6px rgba(226, 191, 118, 0.1);
+        }
+
+        .home-hero h1 {
+            margin: 0 0 22px;
+            color: var(--home-white);
+            font-size: clamp(39px, 6vw, 70px);
+            line-height: 1.25;
+        }
+
+        .home-hero h1 span {
+            color: var(--home-gold-light);
+        }
+
+        .home-hero-description {
+            max-width: 670px;
+            margin: 0 0 32px;
+            color: #d6d0c6;
+            font-size: 18px;
+            line-height: 2;
+        }
+
+        .home-hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-bottom: 38px;
+        }
+
+        .home-primary-button,
+        .home-secondary-button {
+            min-height: 52px;
+            padding: 0 25px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.25s ease;
+        }
+
+        .home-primary-button {
+            background: linear-gradient(
+                135deg,
+                var(--home-gold-light),
+                var(--home-gold)
+            );
+            color: var(--home-dark);
+            box-shadow: 0 12px 30px rgba(201, 154, 69, 0.22);
+        }
+
+        .home-secondary-button {
+            color: var(--home-white);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .home-primary-button:hover,
+        .home-secondary-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .home-hero-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .home-stat {
+            padding-left: 30px;
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .home-stat:last-child {
+            border-left: 0;
+        }
+
+        .home-stat strong {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--home-gold-light);
+            font-size: 25px;
+        }
+
+        .home-stat span {
+            color: #c6c0b7;
+            font-size: 13px;
+        }
+
+        /* مربع البحث */
+        .home-search-wrapper {
+            position: relative;
+            z-index: 5;
+            margin-top: -52px;
+        }
+
+        .home-search-box {
+            padding: 23px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr auto;
+            gap: 14px;
+            background: var(--home-white);
+            border-radius: 18px;
+            box-shadow: 0 18px 50px rgba(26, 21, 15, 0.12);
+        }
+
+        .home-field label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--home-text);
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .home-field select,
+        .home-field input,
+        .home-field textarea {
+            width: 100%;
+            height: 49px;
+            padding: 0 14px;
+            border: 1px solid #e6ded1;
+            border-radius: 10px;
+            outline: none;
+            background: #fcfaf7;
+            color: var(--home-text);
+        }
+
+        .home-field textarea {
+            min-height: 49px;
+            padding-top: 13px;
+            resize: vertical;
+        }
+
+        .home-field-wide { grid-column: span 2; }
+
+        .home-dual-date {
+            margin: 8px 0 0;
+            color: var(--home-brown);
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 1.7;
+        }
+
+        .home-field select:focus,
+        .home-field input:focus {
+            border-color: var(--home-gold);
+        }
+
+        .home-search-button {
+            align-self: end;
+            height: 49px;
+            padding: 0 27px;
+            border: 0;
+            border-radius: 10px;
+            background: var(--home-dark);
+            color: var(--home-white);
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        .home-search-button:hover {
+            background: var(--home-gold);
+            color: var(--home-dark);
+        }
+
+        .home-search-result {
+            display: none;
+            margin: 18px 0 0;
+            padding: 15px 18px;
+            border-right: 4px solid var(--home-qatt-green);
+            border-radius: 10px;
+            background: #fff;
+            color: var(--home-text);
+            line-height: 1.8;
+            box-shadow: 0 10px 30px rgba(26, 21, 15, 0.08);
+        }
+
+        .home-search-result.home-visible {
+            display: block;
+        }
+
+        .home-booking-ready {
+            margin-top: 16px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            border: 1px solid #e2d5c1;
+            border-radius: 14px;
+            background: var(--home-dark);
+            color: var(--home-white);
+        }
+
+        .home-booking-date strong,
+        .home-booking-date span { display: block; }
+
+        .home-booking-date span { margin-top: 5px; color: var(--home-gold-light); }
+
+        .home-book-now {
+            min-width: 175px;
+            min-height: 52px;
+            border: 0;
+            border-radius: 11px;
+            background: linear-gradient(135deg, var(--home-gold-light), var(--home-gold));
+            color: var(--home-dark);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .home-book-now:disabled { opacity: 0.45; cursor: not-allowed; }
+
+        .home-order-summary {
+            margin-top: 14px;
+            padding: 18px;
+            border: 1px solid #e2d5c1;
+            border-radius: 14px;
+            background: var(--home-white);
+            box-shadow: 0 10px 30px rgba(26, 21, 15, 0.07);
+        }
+
+        .home-order-summary h3 { margin: 0 0 12px; font-size: 17px; }
+        .home-order-empty { margin: 0; color: var(--home-muted); }
+        .home-order-items { display: flex; flex-wrap: wrap; gap: 9px; }
+        .home-order-item {
+            padding: 8px 11px;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            border-radius: 999px;
+            background: var(--home-beige);
+            color: var(--home-brown);
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .home-order-remove {
+            width: 23px;
+            height: 23px;
+            padding: 0;
+            border: 0;
+            border-radius: 50%;
+            background: var(--home-qatt-red);
+            color: var(--home-white);
+            cursor: pointer;
+        }
+
+        /* الخدمات */
+        .home-services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .home-category-filters {
+            margin: 0 0 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .home-category-button {
+            min-height: 44px;
+            padding: 0 18px;
+            border: 1px solid #d9c9af;
+            border-radius: 999px;
+            background: var(--home-white);
+            color: var(--home-brown);
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        .home-category-button:hover,
+        .home-category-button.home-active {
+            border-color: var(--home-gold);
+            background: var(--home-dark);
+            color: var(--home-gold-light);
+            transform: translateY(-2px);
+        }
+
+        .home-service-card {
+            order: 20;
+            padding: 28px 22px;
+            border: 1px solid #e7ded1;
+            border-radius: 17px;
+            background: var(--home-white);
+            transition: 0.3s ease;
+        }
+
+        .home-service-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(201, 154, 69, 0.65);
+            box-shadow: 0 17px 35px rgba(37, 29, 20, 0.09);
+        }
+
+        .home-service-icon {
+            width: 58px;
+            height: 58px;
+            margin-bottom: 21px;
+            border-radius: 15px;
+            display: grid;
+            place-items: center;
+            background: rgba(201, 154, 69, 0.13);
+            color: var(--home-gold);
+            font-size: 27px;
+        }
+
+        .home-service-card h3 {
+            margin: 0 0 11px;
+            color: var(--home-dark);
+            font-size: 19px;
+        }
+
+        .home-service-card[data-category="singers"] { order: 1; }
+        .home-service-card[data-category="female-singers"] { order: 2; }
+        .home-service-card[data-category="audio"] { order: 3; }
+        .home-service-card[data-category="screens"] { order: 4; }
+        .home-service-card[data-category="art-style"] { order: 5; }
+        .home-service-card[data-category="hair-style"] { order: 6; }
+        .home-service-card[data-category="production"] { order: 7; }
+        .home-service-card[data-category="reception-tables"] { order: 8; }
+
+        .home-card-toggle {
+            width: 100%;
+            min-height: 40px;
+            padding: 0 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            border: 1px solid #e1d5c3;
+            border-radius: 9px;
+            background: var(--home-beige);
+            color: var(--home-brown);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .home-card-toggle-arrow {
+            display: inline-block;
+            color: var(--home-gold);
+            font-size: 18px;
+            transition: transform 0.25s ease;
+        }
+
+        .home-service-card.home-expanded .home-card-toggle-arrow {
+            transform: rotate(180deg);
+        }
+
+        .home-service-card:not(.home-expanded) > p,
+        .home-service-card:not(.home-expanded) > .home-artist-links,
+        .home-service-card:not(.home-expanded) > .home-service-action {
+            display: none;
+        }
+
+        .home-service-card.home-expanded > p {
+            margin-top: 15px;
+        }
+
+        .home-service-card p {
+            margin: 0;
+            color: var(--home-muted);
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .home-artist-links {
+            margin: 18px 0 0;
+            padding: 0;
+            display: grid;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .home-artist-links a {
+            display: inline-block;
+            border-radius: 8px;
+            color: var(--home-brown);
+            text-decoration: underline;
+            font-size: 13px;
+            line-height: 1.55;
+            transition: 0.2s ease;
+        }
+
+        .home-artist-links a:hover {
+            color: var(--home-qatt-red);
+        }
+
+        .home-artist-links strong { color: inherit; }
+
+        .home-artist-links li {
+            padding: 11px;
+            display: grid;
+            gap: 7px;
+            border-radius: 9px;
+            background: var(--home-beige);
+        }
+
+        .home-artist-add {
+            min-height: 34px;
+            border: 1px solid var(--home-gold);
+            border-radius: 7px;
+            background: var(--home-white);
+            color: var(--home-brown);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .home-artist-add.home-selected {
+            border-color: var(--home-qatt-green);
+            background: var(--home-qatt-green);
+            color: var(--home-white);
+        }
+
+        .home-service-action {
+            width: 100%;
+            min-height: 43px;
+            margin-top: 20px;
+            border: 1px solid var(--home-gold);
+            border-radius: 9px;
+            background: transparent;
+            color: var(--home-brown);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .home-service-card.home-selected {
+            border-color: var(--home-qatt-green);
+            box-shadow: 0 14px 32px rgba(67, 135, 107, 0.18);
+        }
+
+        .home-service-action:hover { background: var(--home-gold); color: var(--home-dark); }
+
+        .home-service-card.home-selected .home-service-action {
+            border-color: var(--home-qatt-green);
+            background: var(--home-qatt-green);
+            color: var(--home-white);
+        }
+
+        /* طريقة العمل */
+        .home-how-section {
+            background: var(--home-dark);
+        }
+
+        .home-how-section .home-section-title h2 {
+            color: var(--home-white);
+        }
+
+        .home-how-section .home-section-title p {
+            color: #bdb7ad;
+        }
+
+        .home-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .home-step {
+            position: relative;
+            padding: 31px;
+            border-radius: 17px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--home-dark-soft);
+        }
+
+        .home-step-number {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 20px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--home-gold);
+            color: var(--home-dark);
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        .home-step h3 {
+            margin: 0 0 12px;
+            color: var(--home-white);
+        }
+
+        .home-step p {
+            margin: 0;
+            color: #bab4aa;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        /* التواصل */
+        .home-contact-box {
+            padding: 55px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            border-radius: 24px;
+            background: var(--home-white);
+            box-shadow: 0 20px 55px rgba(33, 25, 17, 0.08);
+        }
+
+        .home-contact-info h2 {
+            margin: 0 0 17px;
+            font-size: 36px;
+        }
+
+        .home-testimonials-section { background: #efe4d4; }
+        .home-testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .home-testimonial-card {
+            padding: 25px;
+            border: 1px solid #dccdb7;
+            border-radius: 15px;
+            background: var(--home-white);
+        }
+        .home-testimonial-stars { color: var(--home-gold); letter-spacing: 3px; }
+        .home-testimonial-card h3 { margin: 13px 0 9px; }
+        .home-testimonial-card p { margin: 0 0 18px; color: var(--home-muted); line-height: 1.8; }
+        .home-testimonial-card a { color: var(--home-brown); font-weight: bold; }
+
+        .home-social-links {
+            margin: 0 0 24px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .home-social-link {
+            min-height: 48px;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            border: 1px solid #e3d6c4;
+            border-radius: 11px;
+            background: var(--home-beige);
+            color: var(--home-dark);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.25s ease;
+        }
+
+        .home-social-link:hover {
+            border-color: var(--home-gold);
+            transform: translateX(-4px);
+        }
+
+        .home-social-link span:last-child {
+            color: var(--home-brown);
+            font-size: 13px;
+        }
+
+        .home-contact-info p {
+            margin: 0 0 25px;
+            color: var(--home-muted);
+            line-height: 1.9;
+        }
+
+        .home-contact-item {
+            margin-bottom: 13px;
+            color: var(--home-text);
+            font-weight: bold;
+        }
+
+        .home-contact-form {
+            display: grid;
+            gap: 13px;
+        }
+
+        .home-contact-form input,
+        .home-contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #e3dacd;
+            border-radius: 11px;
+            outline: none;
+            background: #fcfaf7;
+        }
+
+        .home-contact-form textarea {
+            min-height: 125px;
+            resize: vertical;
+        }
+
+        .home-contact-form input:focus,
+        .home-contact-form textarea:focus {
+            border-color: var(--home-gold);
+        }
+
+        .home-contact-form button {
+            min-height: 51px;
+            border: 0;
+            border-radius: 11px;
+            background: var(--home-gold);
+            color: var(--home-dark);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media (max-width: 950px) {
+            .home-search-box {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .home-services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .home-contact-box {
+                grid-template-columns: 1fr;
+            }
+
+            .home-testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 700px) {
+            .home-container {
+                width: min(100% - 22px, 1180px);
+            }
+
+            .home-section {
+                padding: 65px 0;
+            }
+
+            .home-hero {
+                min-height: 620px;
+            }
+
+            .home-hero-video { object-position: center center; }
+
+            .home-hero-video-shade {
+                background: linear-gradient(180deg,
+                    rgba(8, 8, 7, 0.5), rgba(8, 8, 7, 0.88));
+            }
+
+            .home-hero-description {
+                font-size: 16px;
+            }
+
+            .home-hero-stats {
+                gap: 18px;
+            }
+
+            .home-stat {
+                padding-left: 17px;
+            }
+
+            .home-search-wrapper {
+                margin-top: -30px;
+            }
+
+            .home-search-box,
+            .home-services-grid,
+            .home-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .home-contact-box {
+                padding: 28px 20px;
+            }
+
+            .home-booking-ready { align-items: stretch; flex-direction: column; }
+        }
+    </style>
+<style>
+.static-account-summary{display:flex;flex-direction:column;line-height:1.25;text-align:right;color:#fff;white-space:nowrap}
+.static-account-summary[hidden]{display:none}.static-account-summary strong{color:#e4c35f;font-size:.9rem}
+.static-account-summary small{font-size:.75rem;direction:ltr;text-align:right;opacity:.88}
+@media(max-width:760px){.static-account-summary{max-width:105px}.static-account-summary strong{overflow:hidden;text-overflow:ellipsis}}
+</style></head>
+
+<body>
+
+    
+
+<!-- =====================================================
+     header.html
+     الشريط العلوي لأوسكار ألمع
+===================================================== -->
+
+<style>
+    .alm-header,
+    .alm-header * {
+        box-sizing: border-box;
+    }
+
+    .alm-header {
+        --alm-dark: #f7f7ea;
+        --alm-dark-soft: #1c1b19;
+        --alm-gold: #c99a45;
+        --alm-gold-light: #e4c35f;
+        --alm-brown: #76503a;
+        --alm-qatt-red: #9f2637;
+        --alm-qatt-blue: #27557d;
+        --alm-qatt-green: #43876b;
+        --alm-beige: #f6f0e5;
+        --alm-white: #ffffff;
+        --alm-text: #29251f;
+
+        position: relative;
+        z-index: 1000;
+        width: 100%;
+        direction: rtl;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+
+    .alm-header a {
+        text-decoration: none;
+    }
+
+    .alm-header-container {
+        width: min(1180px, calc(100% - 32px));
+        margin: auto;
+    }
+
+    /* الشريط الإعلاني */
+    .alm-topbar {
+        background:
+            linear-gradient(90deg,
+                var(--alm-brown), var(--alm-gold), var(--alm-qatt-green),
+                var(--alm-gold), var(--alm-qatt-blue), var(--alm-gold),
+                var(--alm-qatt-red));
+        color: var(--alm-dark);
+        font-size: 13px;
+    }
+
+    .alm-topbar-content {
+        min-height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .alm-topbar-message {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .alm-topbar-links {
+        display: flex;
+        align-items: center;
+        gap: 17px;
+    }
+
+    .alm-topbar-links a {
+        color: var(--alm-dark);
+        font-weight: bold;
+        transition: opacity 0.2s ease;
+    }
+
+    .alm-topbar-links a:hover {
+        opacity: 0.65;
+    }
+
+    /* القسم الرئيسي */
+    .alm-main-header {
+        background: rgba(16, 16, 15, 0.98);
+        border-bottom: 1px solid rgba(201, 154, 69, 0.24);
+    }
+
+    .alm-main-content {
+        min-height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+    }
+
+    .alm-brand {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        color: var(--alm-white);
+        flex-shrink: 0;
+    }
+
+    .alm-brand-logo {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        display: block;
+        object-fit: cover;
+        background: var(--alm-white);
+        border: 2px solid var(--alm-gold-light);
+        box-shadow: 0 8px 24px rgba(201, 154, 69, 0.2);
+    }
+
+    .alm-brand-text h1 {
+        margin: 0 0 5px;
+        font-size: 22px;
+        color: var(--alm-gold-light);
+    }
+
+    .alm-brand-text p {
+        margin: 0;
+        color: #c9c5bd;
+        font-size: 12px;
+    }
+
+    /* القائمة */
+    .alm-navigation {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .alm-nav-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .alm-nav-list a {
+        display: block;
+        padding: 12px 14px;
+        border-radius: 10px;
+        color: #eee9df;
+        font-size: 14px;
+        font-weight: bold;
+        transition:
+            background 0.25s ease,
+            color 0.25s ease,
+            transform 0.25s ease;
+    }
+
+    .alm-nav-list a:hover,
+    .alm-nav-list a.alm-active {
+        background: rgba(201, 154, 69, 0.14);
+        color: var(--alm-gold-light);
+        transform: translateY(-2px);
+    }
+
+    /* أزرار المستخدم */
+    .alm-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    .alm-action-link,
+    .alm-booking-button {
+        min-height: 42px;
+        padding: 0 17px;
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        color: var(--alm-white);
+        font-size: 13px;
+        font-weight: bold;
+        transition: 0.25s ease;
+    }
+
+    .alm-action-link:hover {
+        border-color: var(--alm-gold);
+        color: var(--alm-gold-light);
+    }
+
+    button.alm-action-link {
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .alm-auth-modal[hidden] { display: none; }
+
+    .alm-auth-modal {
+        position: fixed;
+        z-index: 4000;
+        inset: 0;
+        padding: 20px;
+        display: grid;
+        place-items: center;
+        background: rgba(5, 5, 5, 0.82);
+    }
+
+    .alm-auth-dialog {
+        width: min(440px, 100%);
+        padding: 28px;
+        border: 1px solid rgba(201, 154, 69, 0.45);
+        border-radius: 18px;
+        background: var(--alm-white);
+        color: var(--alm-text);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+    }
+
+    .alm-auth-dialog h2 { margin: 0 0 8px; color: var(--alm-dark); }
+    .alm-auth-dialog > p { margin: 0 0 20px; color: #6f675d; line-height: 1.7; }
+    .alm-auth-form { display: grid; gap: 13px; }
+    .alm-auth-form label { font-size: 13px; font-weight: bold; }
+    .alm-auth-form input {
+        width: 100%;
+        height: 48px;
+        padding: 0 13px;
+        border: 1px solid #ded5c8;
+        border-radius: 9px;
+        font: inherit;
+    }
+    .alm-auth-submit {
+        min-height: 49px;
+        border: 0;
+        border-radius: 9px;
+        background: var(--alm-dark);
+        color: var(--alm-gold-light);
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .alm-auth-message {
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: var(--alm-beige);
+        color: var(--alm-brown);
+        line-height: 1.6;
+        font-size: 13px;
+    }
+    .alm-auth-close {
+        margin-top: 14px;
+        border: 0;
+        background: transparent;
+        color: var(--alm-brown);
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    .alm-booking-button {
+        background: linear-gradient(
+            135deg,
+            var(--alm-gold-light),
+            var(--alm-gold)
+        );
+        color: var(--alm-dark);
+        border: 0;
+        box-shadow: 0 8px 20px rgba(201, 154, 69, 0.18);
+    }
+
+    .alm-booking-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(201, 154, 69, 0.27);
+    }
+
+    /* زر الجوال */
+    .alm-menu-toggle {
+        width: 45px;
+        height: 43px;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 10px;
+        background: transparent;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .alm-menu-toggle span {
+        width: 23px;
+        height: 2px;
+        background: var(--alm-gold-light);
+        border-radius: 5px;
+        transition: 0.25s ease;
+    }
+
+    .alm-menu-toggle.alm-open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .alm-menu-toggle.alm-open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .alm-menu-toggle.alm-open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    @media (max-width: 980px) {
+        .alm-menu-toggle {
+            display: flex;
+        }
+
+        .alm-navigation {
+            position: absolute;
+            top: 100%;
+            right: 16px;
+            left: 16px;
+            display: none;
+            padding: 12px;
+            background: var(--alm-dark-soft);
+            border: 1px solid rgba(201, 154, 69, 0.25);
+            border-radius: 0 0 16px 16px;
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.28);
+        }
+
+        .alm-navigation.alm-show {
+            display: block;
+        }
+
+        .alm-nav-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .alm-nav-list a {
+            text-align: center;
+        }
+
+        .alm-header-actions .alm-action-link { display: inline-flex; }
+    }
+
+    @media (max-width: 650px) {
+        .alm-header-container {
+            width: min(100% - 22px, 1180px);
+        }
+
+        .alm-topbar-content {
+            min-height: 42px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .alm-topbar-links {
+            display: none;
+        }
+
+        .alm-main-content {
+            min-height: 78px;
+            gap: 12px;
+        }
+
+        .alm-brand-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+        }
+
+        .alm-brand-text h1 {
+            font-size: 17px;
+        }
+
+        .alm-brand-text p {
+            display: none;
+        }
+
+        .alm-booking-button {
+            display: none;
+        }
+
+        .alm-nav-list {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<header class="alm-header" id="almSiteHeader">
+
+    <div class="alm-topbar">
+        <div class="alm-header-container alm-topbar-content">
+            <p class="alm-topbar-message">
+                احجز مناسبتك بسهولة مع أفضل مقدمي الخدمات
+            </p>
+
+            <div class="alm-topbar-links">
+                <a href="index.html#contact">تواصل معنا</a>
+                <a href="index.html#services">اختر خدماتك</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="alm-main-header">
+        <div class="alm-header-container alm-main-content">
+
+            <a href="index.html" class="alm-brand">
+                <img
+                    class="alm-brand-logo"
+                    src="assets/images/oskar-almaa-logo.jpg"
+                    alt="شعار أوسكار ألمع"
+                    width="64"
+                    height="64"
+                >
+
+                <span class="alm-brand-text">
+                    <h1>أوسكار ألمع</h1>
+                    <p>للصوتيات والمرئيات وتجهيز المناسبات</p>
+                </span>
+            </a>
+
+            <nav
+                class="alm-navigation"
+                id="almNavigation"
+                aria-label="القائمة الرئيسية"
+            >
+                <ul class="alm-nav-list">
+                    <li>
+                        <a href="index.html" class="alm-active">
+                            الرئيسية
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#services">
+                            الخدمات
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#services">
+                            أقسام الخدمات
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#services">
+                            اختر خدماتك
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#contact">
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="alm-header-actions">
+                
+                    <span class="static-account-summary" id="staticAccountSummary" hidden>
+                        <strong id="staticAccountName"></strong>
+                        <small id="staticAccountPhone"></small>
+                    </span>
+                    <button type="button" class="alm-action-link" id="almLoginOpen">
+                        تسجيل الدخول
+                    </button>
+                
+
+                <a href="bookings.html" class="alm-action-link" id="staticMyBookings" hidden>حجوزاتي</a><button type="button" class="alm-action-link" id="staticLogout" hidden>تسجيل الخروج</button><a href="index.html#services" class="alm-booking-button">
+                    احجز مناسبتك
+                </a>
+
+                <button
+                    class="alm-menu-toggle"
+                    id="almMenuToggle"
+                    type="button"
+                    aria-label="فتح القائمة"
+                    aria-expanded="false"
+                    aria-controls="almNavigation"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</header>
+
+
+<div class="alm-auth-modal" id="almAuthModal" hidden>
+    <section class="alm-auth-dialog" role="dialog" aria-modal="true" aria-labelledby="almAuthTitle">
+        <div class="alm-auth-message" id="staticAuthMessage"></div><div id="almLoginStep">
+            <h2 id="almAuthTitle">تسجيل الدخول أو إنشاء حساب</h2>
+            <p>أدخل اسم المستخدم ورقم الجوال لتسجيل الدخول مباشرة.</p>
+            
+            <form class="alm-auth-form" id="staticLoginForm">
+                <label for="almUsername">اسم المستخدم</label>
+                <input id="almUsername" name="username" type="text" autocomplete="username" maxlength="150" required>
+                <label for="almPhone">رقم الجوال</label>
+                <input id="almPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xxxxxxxx" maxlength="16" required>
+                <button class="alm-auth-submit" type="submit">تسجيل الدخول</button>
+            </form>
+        </div>
+        <button class="alm-auth-close" id="almAuthClose" type="button">إغلاق</button>
+    </section>
+</div>
+
+
+<script>
+(function () {
+    "use strict";
+
+    const menuButton = document.getElementById("almMenuToggle");
+    const navigation = document.getElementById("almNavigation");
+    const loginOpen = document.getElementById("almLoginOpen");
+    const authModal = document.getElementById("almAuthModal");
+    const authClose = document.getElementById("almAuthClose");
+    const loginStep = document.getElementById("almLoginStep");
+
+    function openAuthModal() {
+        if (!authModal) { return; }
+        authModal.hidden = false;
+        document.body.style.overflow = "hidden";
+        loginStep.hidden = false;
+    }
+
+    if (loginOpen) {
+        loginOpen.addEventListener("click", openAuthModal);
+    }
+
+    if (authClose) {
+        authClose.addEventListener("click", function () {
+            authModal.hidden = true;
+            document.body.style.overflow = "";
+        });
+    }
+
+    if (authModal) {
+        authModal.addEventListener("click", function (event) {
+            if (event.target === authModal) { authClose.click(); }
+        });
+        const authStep = new URLSearchParams(window.location.search).get("auth");
+        if (authStep === "login") {
+            openAuthModal();
+        }
+    }
+
+    if (!menuButton || !navigation) {
+        return;
+    }
+
+    menuButton.addEventListener("click", function () {
+        const isOpen = navigation.classList.toggle("alm-show");
+
+        menuButton.classList.toggle("alm-open", isOpen);
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navigation.addEventListener("click", function (event) {
+        if (
+            window.innerWidth <= 980 &&
+            event.target.closest("a")
+        ) {
+            navigation.classList.remove("alm-show");
+            menuButton.classList.remove("alm-open");
+            menuButton.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 980) {
+            navigation.classList.remove("alm-show");
+            menuButton.classList.remove("alm-open");
+            menuButton.setAttribute("aria-expanded", "false");
+        }
+    });
+})();
+</script>
+
+
+    <main>
+
+        <section class="home-hero">
+            <video
+                class="home-hero-video"
+                id="homeHeroVideo"
+                autoplay
+                muted
+                loop
+                playsinline
+                webkit-playsinline
+                preload="metadata"
+                poster="assets/videos/oskar-hero-poster.jpg"
+                disablepictureinpicture
+                aria-hidden="true"
+            >
+                <source src="assets/videos/oskar-hero-last-13.mp4" type="video/mp4">
+                <source src="assets/videos/oskar-hero-last-13.webm" type="video/webm">
+            </video>
+            <div class="home-hero-video-shade" aria-hidden="true"></div>
+            <div class="home-container">
+                <div class="home-hero-content">
+
+                    <span class="home-hero-badge">
+                        أوسكار ألمع للصوتيات والمرئيات
+                    </span>
+
+                    <h1>
+                        مناسبتك تلمع مع
+                        <span>أوسكار ألمع</span>
+                    </h1>
+
+                    <p class="home-hero-description">
+                        من أول نغمة إلى آخر لحظة، نصنع لمناسبتك حضورًا لا يُنسى.
+                        اختر الفنانين والصوتيات والشاشات والتصوير وكل تفاصيل التجهيز،
+                        واجمع طلباتك بسهولة مع أوسكار ألمع.
+                    </p>
+
+                    <div class="home-hero-buttons">
+                        <a href="#services" class="home-primary-button">
+                            استعرض الخدمات
+                        </a>
+
+                        <a href="#services" class="home-secondary-button">
+                            اختر خدماتك
+                        </a>
+                    </div>
+
+                    <div class="home-hero-stats">
+                        <div class="home-stat">
+                            <strong>+250</strong>
+                            <span>مقدم خدمة</span>
+                        </div>
+
+                        <div class="home-stat">
+                            <strong>+120</strong>
+                            <span>قاعة وموقع</span>
+                        </div>
+
+                        <div class="home-stat">
+                            <strong>+900</strong>
+                            <span>حجز ناجح</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="home-search-wrapper">
+            <div class="home-container">
+                <form class="home-search-box" id="homeSearchForm" method="get" action="#services">
+
+                    <div class="home-field">
+                        <label for="eventType">نوع المناسبة</label>
+
+                        <select id="eventType" name="type" required>
+                            <option value="">اختر نوع المناسبة</option>
+                            <option>حفل زواج</option>
+                            <option>حفل تخرج</option>
+                            <option>مناسبة عائلية</option>
+                            <option>فعالية شركات</option>
+                        </select>
+                    </div>
+
+                    <div class="home-field">
+                        <label for="eventGovernorate">المدينة</label>
+
+                        <select id="eventGovernorate" name="governorate" required>
+                            <option value="">اختر المدينة</option>
+                        </select>
+                    </div>
+
+                    <div class="home-field">
+                        <label for="eventCity">المحافظة</label>
+
+                        <select id="eventCity" name="city" required disabled>
+                            <option value="">اختر المدينة أولًا</option>
+                        </select>
+                    </div>
+
+                    <div class="home-field">
+                        <label for="eventDate">تاريخ المناسبة (ميلادي)</label>
+
+                        <input id="eventDate" name="date" type="date" required>
+                        <p class="home-dual-date" id="homeDualDate">سيظهر التاريخ الهجري هنا بعد الاختيار</p>
+                    </div>
+
+                    <div class="home-field home-field-wide">
+                        <label for="venueLocation">موقع القاعة (اختياري)</label>
+                        <input id="venueLocation" name="venue_location" type="url" placeholder="يمكن إضافته لاحقًا">
+                    </div>
+
+                    <div class="home-field home-field-wide">
+                        <label for="bookingNotes">ملاحظات الحجز (اختياري)</label>
+                        <textarea id="bookingNotes" name="notes" maxlength="500" placeholder="اكتب أي تفاصيل أو طلبات إضافية"></textarea>
+                    </div>
+
+                    <button class="home-search-button" type="submit">
+                        تحقق من الموعد
+                    </button>
+
+                </form>
+
+                <p class="home-search-result" id="homeSearchResult" role="status" aria-live="polite"></p>
+
+                <div class="home-booking-ready" id="homeBookingReady">
+                    <div class="home-booking-date">
+                        <strong>موعد الحجز المختار</strong>
+                        <span id="homeSelectedDate">حدد بيانات المناسبة أولًا</span>
+                    </div>
+                    <button class="home-book-now" id="homeBookNow" type="button" disabled>
+                        للحجز والاستفسار
+                    </button>
+                </div>
+
+                <aside class="home-order-summary" aria-live="polite">
+                    <h3>ملخص الطلبات المختارة</h3>
+                    <p class="home-order-empty" id="homeOrderEmpty">لم تضف أي طلب بعد.</p>
+                    <div class="home-order-items" id="homeOrderItems"></div>
+                </aside>
+            </div>
+        </div>
+
+        <section class="home-section" id="services">
+            <div class="home-container">
+
+                <div class="home-section-title">
+                    <span>خدمات متكاملة</span>
+
+                    <h2>كل ما تحتاجه لإقامة مناسبتك</h2>
+
+                    <p>
+                        اختر من مجموعة متنوعة من الخدمات المقدمة
+                        بواسطة مزودين محترفين وموثوقين.
+                    </p>
+                </div>
+
+                <div class="home-category-filters" aria-label="تصفية أقسام الخدمات">
+                    <button class="home-category-button home-active" type="button" data-category="all">الكل</button>
+                    <button class="home-category-button" type="button" data-category="singers">مطربين</button>
+                    <button class="home-category-button" type="button" data-category="female-singers">مطربات</button>
+                    <button class="home-category-button" type="button" data-category="audio">أجهزة صوتية وموسيقية</button>
+                    <button class="home-category-button" type="button" data-category="screens">شاشات رقمية</button>
+                    <button class="home-category-button" type="button" data-category="art-style">آرت ستايل</button>
+                    <button class="home-category-button" type="button" data-category="hair-style">هير ستايل</button>
+                    <button class="home-category-button" type="button" data-category="production">تصوير وإنتاج</button>
+                    <button class="home-category-button" type="button" data-category="reception-tables">طاولات الاستقبال</button>
+                    
+                </div>
+
+                <div class="home-services-grid">
+                    <article class="home-service-card" data-category="singers" data-service="مطربين">
+                        <div class="home-service-icon">♫</div>
+                        <h3>مطربين</h3>
+                        <p>اختر المطرب واستمع إلى عمله المنشور في قناة أوسكار ألمع.</p>
+                        <ul class="home-artist-links">
+                            <li><strong>مصطفى الصغير</strong><button class="home-artist-add" type="button" data-service="المطرب: مصطفى الصغير">أضف للحجز</button><a href="https://www.youtube.com/watch?v=uUrCHXxq6dI" target="_blank" rel="noopener noreferrer">استمع: الحكاية</a></li>
+                            <li><strong>سالم الصغير</strong><button class="home-artist-add" type="button" data-service="المطرب: سالم الصغير">أضف للحجز</button><a href="https://www.youtube.com/watch?v=qi5CVsDanEU" target="_blank" rel="noopener noreferrer">استمع: وقلبي نجا بأعجوبة</a></li>
+                            <li><strong>عبادي العدني</strong><button class="home-artist-add" type="button" data-service="المطرب: عبادي العدني">أضف للحجز</button><a href="https://www.youtube.com/watch?v=RvMTrvVT8a8" target="_blank" rel="noopener noreferrer">استمع: شل بنتنا</a></li>
+                        </ul>
+                        <button class="home-service-action" type="button">أضف للطلب</button>
+                    </article>
+                    <article class="home-service-card" data-category="female-singers" data-service="مطربات">
+                        <div class="home-service-icon">♪</div>
+                        <h3>مطربات</h3>
+                        <p>اختر الفنانة واستمع إلى عملها المنشور في قناة أوسكار ألمع.</p>
+                        <ul class="home-artist-links">
+                            <li><strong>العنود البيشي</strong><button class="home-artist-add" type="button" data-service="المطربة: العنود البيشي">أضف للحجز</button><a href="https://www.youtube.com/watch?v=oe69R87839g" target="_blank" rel="noopener noreferrer">استمع: مخالف كل شيء قد راح</a></li>
+                            <li><strong>ولاء المقعدي</strong><button class="home-artist-add" type="button" data-service="المطربة: ولاء المقعدي">أضف للحجز</button><a href="https://www.youtube.com/watch?v=ItpffYLBAew" target="_blank" rel="noopener noreferrer">استمع: قبل أمس أحبك</a></li>
+                            <li><strong>صفية عسيري</strong><button class="home-artist-add" type="button" data-service="المطربة: صفية عسيري">أضف للحجز</button><a href="https://www.youtube.com/watch?v=L6F0ilgMjqs" target="_blank" rel="noopener noreferrer">استمع: يا همومي هوني</a></li>
+                            <li><strong>سميرة خبر</strong><button class="home-artist-add" type="button" data-service="المطربة: سميرة خبر">أضف للحجز</button><a href="https://www.youtube.com/watch?v=UNOl5GtsJ-s" target="_blank" rel="noopener noreferrer">استمع: فوق سطح القمر</a></li>
+                            <li><strong>رباب العبدالله</strong><button class="home-artist-add" type="button" data-service="المطربة: رباب العبدالله">أضف للحجز</button><a href="https://www.youtube.com/watch?v=dPCwOKjGrPg" target="_blank" rel="noopener noreferrer">استمع: أسمر وعاده زاد كحل عيونه</a></li>
+                            <li><strong>دنيا سعد</strong><button class="home-artist-add" type="button" data-service="المطربة: دنيا سعد">أضف للحجز</button><a href="https://www.youtube.com/watch?v=h_kP4nKUroM" target="_blank" rel="noopener noreferrer">استمع: ثلاث يا فاتن النظرة</a></li>
+                        </ul>
+                        <button class="home-service-action" type="button">أضف للطلب</button>
+                    </article>
+                    <article class="home-service-card" data-category="audio" data-service="باقة الأجهزة الصوتية والموسيقية كاملة">
+                        <div class="home-service-icon">♬</div>
+                        <h3>أجهزة صوتية وموسيقية</h3>
+                        <p>اختر جهازًا واحدًا أو عدة أجهزة، أو أضف الباقة كاملة.</p>
+                        <ul class="home-artist-links">
+                            <li><strong>سماعات احترافية للحفلات</strong><button class="home-artist-add" type="button" data-service="سماعات احترافية للحفلات">أضف للطلب</button></li>
+                            <li><strong>مكسر صوت رقمي</strong><button class="home-artist-add" type="button" data-service="مكسر صوت رقمي">أضف للطلب</button></li>
+                            <li><strong>ميكروفونات لاسلكية</strong><button class="home-artist-add" type="button" data-service="ميكروفونات لاسلكية">أضف للطلب</button></li>
+                            <li><strong>أجهزة إيقاع ومؤثرات صوتية</strong><button class="home-artist-add" type="button" data-service="أجهزة إيقاع ومؤثرات صوتية">أضف للطلب</button></li>
+                            <li><strong>أورغ موسيقي</strong><button class="home-artist-add" type="button" data-service="أورغ موسيقي">أضف للطلب</button></li>
+                            <li><strong>عود وآلات موسيقية</strong><button class="home-artist-add" type="button" data-service="عود وآلات موسيقية">أضف للطلب</button></li>
+                            <li><strong>مهندس صوت وتشغيل</strong><button class="home-artist-add" type="button" data-service="مهندس صوت وتشغيل">أضف للطلب</button></li>
+                        </ul>
+                        <button class="home-service-action" type="button">أضف الباقة كاملة</button>
+                    </article>
+                    <article class="home-service-card" data-category="art-style" data-service="آرت ستايل"><div class="home-service-icon">✦</div><h3>آرت ستايل</h3><p>لمسات فنية وهوية بصرية متناسقة للمناسبة.</p><button class="home-service-action" type="button">أضف للطلب</button></article>
+                    <article class="home-service-card" data-category="hair-style" data-service="هير ستايل"><div class="home-service-icon">✂</div><h3>هير ستايل</h3><p>خيارات تصفيف وتجهيز احترافية للحفلات.</p><button class="home-service-action" type="button">أضف للطلب</button></article>
+                    <article class="home-service-card" data-category="production" data-service="تصوير وإنتاج"><div class="home-service-icon">◉</div><h3>تصوير وإنتاج</h3><p>تصوير فوتوغرافي وفيديو وإنتاج متكامل للمناسبة.</p><button class="home-service-action" type="button">أضف للطلب</button></article>
+                    <article class="home-service-card" data-category="screens" data-service="باقة الشاشات الرقمية كاملة">
+                        <div class="home-service-icon">▣</div>
+                        <h3>شاشات رقمية</h3>
+                        <p>اختر نوع الشاشة المطلوبة لتجهيز المناسبة.</p>
+                        <ul class="home-artist-links">
+                            <li><strong>شاشة LED رئيسية</strong><button class="home-artist-add" type="button" data-service="شاشة LED رئيسية">أضف للطلب</button></li>
+                            <li><strong>شاشات جانبية</strong><button class="home-artist-add" type="button" data-service="شاشات جانبية">أضف للطلب</button></li>
+                            <li><strong>شاشة ترحيبية رقمية</strong><button class="home-artist-add" type="button" data-service="شاشة ترحيبية رقمية">أضف للطلب</button></li>
+                            <li><strong>تشغيل وتجهيز المحتوى المرئي</strong><button class="home-artist-add" type="button" data-service="تشغيل وتجهيز المحتوى المرئي">أضف للطلب</button></li>
+                        </ul>
+                        <button class="home-service-action" type="button">أضف الباقة كاملة</button>
+                    </article>
+                    <article class="home-service-card" data-category="reception-tables" data-service="طاولات الاستقبال"><div class="home-service-icon">▤</div><h3>طاولات الاستقبال</h3><p>تجهيز طاولات استقبال أنيقة ومتكاملة بما يناسب هوية المناسبة.</p><button class="home-service-action" type="button">أضف للطلب</button></article>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="home-section home-testimonials-section" id="testimonials">
+            <div class="home-container">
+                <div class="home-section-title">
+                    <span>تجارب حقيقية</span>
+                    <h2>تقييمات عملاء أوسكار ألمع</h2>
+                    <p>شاهد آراء العملاء المنشورة في قناة أوسكار ألمع وشاركنا تجربتك.</p>
+                </div>
+                <div class="home-testimonials-grid">
+                    <article class="home-testimonial-card">
+                        <div class="home-testimonial-stars" aria-label="تقييم العملاء">★★★★★</div>
+                        <h3>آراء زبائن أوسكار ألمع</h3>
+                        <p>مجموعة من تعليقات العملاء وتجاربهم مع خدمات المناسبات.</p>
+                        <a href="https://www.youtube.com/watch?v=yPxOWKDWuIA" target="_blank" rel="noopener noreferrer">شاهد تقييمات العملاء</a>
+                    </article>
+                    <article class="home-testimonial-card">
+                        <div class="home-testimonial-stars" aria-label="تقييم العملاء">★★★★★</div>
+                        <h3>رأيكم يهمنا</h3>
+                        <p>شاهد المزيد من آراء وتجارب عملاء أوسكار ألمع.</p>
+                        <a href="https://www.youtube.com/watch?v=AXWqBg3rxmI" target="_blank" rel="noopener noreferrer">شاهد آراء العملاء</a>
+                    </article>
+                    <article class="home-testimonial-card">
+                        <div class="home-testimonial-stars" aria-hidden="true">★★★★★</div>
+                        <h3>شاركنا تجربتك</h3>
+                        <p>استخدمت خدماتنا؟ أرسل تقييمك مباشرة وسنسعد بمشاركته.</p>
+                        <a href="https://wa.me/966550775703?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A5%D8%B1%D8%B3%D8%A7%D9%84%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%D9%8A%20%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A3%D9%88%D8%B3%D9%83%D8%A7%D8%B1%20%D8%A3%D9%84%D9%85%D8%B9">أرسل تقييمك عبر واتساب</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-section" id="contact">
+            <div class="home-container">
+
+                <div class="home-contact-box">
+
+                    <div class="home-contact-info">
+                        <div class="home-social-links" aria-label="حسابات أوسكار ألمع">
+                            <a class="home-social-link" href="https://www.youtube.com/@Oskaralmaa" target="_blank" rel="noopener noreferrer">
+                                <span>قناة يوتيوب أوسكار ألمع</span>
+                                <span>مشاهدة القناة ←</span>
+                            </a>
+                            <a class="home-social-link" href="https://www.snapchat.com/add/Oskaralmaa" target="_blank" rel="noopener noreferrer">
+                                <span>سناب شات أوسكار ألمع</span>
+                                <span>@Oskaralmaa ←</span>
+                            </a>
+                        </div>
+
+                        <span class="home-hero-badge">
+                            نحن هنا لمساعدتك
+                        </span>
+
+                        <h2>تواصل معنا</h2>
+
+                        <p>
+                            يسعد فريقنا بالإجابة عن استفساراتك
+                            ومساعدتك في اختيار الخدمات المناسبة
+                            لمناسبتك.
+                        </p>
+
+                        <div class="home-contact-item">
+                            الهاتف: <a href="tel:0550775703">0550775703</a>
+                        </div>
+
+                        <div class="home-contact-item">
+                            المملكة العربية السعودية
+                        </div>
+                    </div>
+
+                    <form
+                        class="home-contact-form"
+                        id="homeContactForm"
+                        method="post"
+                    >
+                        <input type="hidden" name="form_type" value="contact">
+                        
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="الاسم الكامل"
+                            maxlength="150"
+                            required
+                        >
+
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="رقم الجوال"
+                            maxlength="30"
+                            required
+                        >
+
+                        <textarea
+                            name="message"
+                            placeholder="اكتب رسالتك هنا"
+                            required
+                        ></textarea>
+
+                        <button type="submit">
+                            إرسال الرسالة
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+
+<!-- =====================================================
+     footer.html
+     الشريط السفلي لأوسكار ألمع
+===================================================== -->
+
+<style>
+    .alm-footer,
+    .alm-footer * {
+        box-sizing: border-box;
+    }
+
+    .alm-footer {
+        --footer-dark: #0e0e0d;
+        --footer-dark-soft: #181715;
+        --footer-gold: #c99a45;
+        --footer-gold-light: #e2bf76;
+        --footer-brown: #76503a;
+        --footer-qatt-red: #9f2637;
+        --footer-qatt-blue: #27557d;
+        --footer-qatt-green: #43876b;
+        --footer-white: #ffffff;
+        --footer-muted: #aaa49a;
+
+        direction: rtl;
+        background: var(--footer-dark);
+        color: var(--footer-white);
+        font-family: Tahoma, Arial, sans-serif;
+    }
+
+    .alm-footer a {
+        text-decoration: none;
+    }
+
+    .alm-footer-container {
+        width: min(1180px, calc(100% - 32px));
+        margin: auto;
+    }
+
+    .alm-footer-main {
+        padding: 65px 0 45px;
+    }
+
+    .alm-footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+        gap: 45px;
+    }
+
+    .alm-footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        margin-bottom: 18px;
+    }
+
+    .alm-footer-logo {
+        width: 58px;
+        height: 58px;
+        display: block;
+        object-fit: cover;
+        border-radius: 14px;
+        background: var(--footer-white);
+        border: 2px solid var(--footer-gold-light);
+    }
+
+    .alm-footer-brand h2 {
+        margin: 0;
+        color: var(--footer-gold-light);
+        font-size: 20px;
+    }
+
+    .alm-footer-description {
+        max-width: 350px;
+        margin: 0;
+        color: var(--footer-muted);
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    .alm-footer-column h3 {
+        position: relative;
+        margin: 0 0 22px;
+        padding-bottom: 13px;
+        color: var(--footer-white);
+        font-size: 17px;
+    }
+
+    .alm-footer-column h3::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 37px;
+        height: 2px;
+        background: var(--footer-gold);
+    }
+
+    .alm-footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 13px;
+    }
+
+    .alm-footer-links a {
+        color: var(--footer-muted);
+        font-size: 14px;
+        transition: 0.25s ease;
+    }
+
+    .alm-footer-links a:hover {
+        padding-right: 5px;
+        color: var(--footer-gold-light);
+    }
+
+    .alm-footer-contact {
+        display: grid;
+        gap: 14px;
+        color: var(--footer-muted);
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .alm-footer-social {
+        margin-top: 23px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+    }
+
+    .alm-footer-social a {
+        min-width: 40px;
+        height: 40px;
+        padding: 0 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 9px;
+        color: var(--footer-gold-light);
+        font-size: 12px;
+        transition: 0.25s ease;
+    }
+
+    .alm-footer-social a:hover {
+        background: var(--footer-gold);
+        border-color: var(--footer-gold);
+        color: var(--footer-dark);
+    }
+
+    .alm-footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.09);
+        border-image: linear-gradient(90deg,
+            var(--footer-brown), var(--footer-gold), var(--footer-qatt-green),
+            var(--footer-qatt-blue), var(--footer-qatt-red), var(--footer-gold)) 1;
+    }
+
+    .alm-footer-bottom-content {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        color: #8f8a81;
+        font-size: 13px;
+    }
+
+    .alm-footer-bottom-content p {
+        margin: 0;
+    }
+
+    .alm-footer-policies {
+        display: flex;
+        gap: 17px;
+    }
+
+    .alm-footer-policies a {
+        color: #8f8a81;
+    }
+
+    .alm-footer-policies a:hover {
+        color: var(--footer-gold-light);
+    }
+
+    .alm-back-to-top {
+        position: fixed;
+        left: 22px;
+        bottom: 22px;
+        z-index: 900;
+        width: 46px;
+        height: 46px;
+        border: 0;
+        border-radius: 12px;
+        display: none;
+        place-items: center;
+        background: var(--footer-gold);
+        color: var(--footer-dark);
+        font-size: 19px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 9px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .alm-back-to-top.alm-visible {
+        display: grid;
+    }
+
+    @media (max-width: 900px) {
+        .alm-footer-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .alm-footer-container {
+            width: min(100% - 22px, 1180px);
+        }
+
+        .alm-footer-grid {
+            grid-template-columns: 1fr;
+            gap: 33px;
+        }
+
+        .alm-footer-bottom-content {
+            padding: 18px 0;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+</style>
+
+<footer class="alm-footer">
+
+    <div class="alm-footer-main">
+        <div class="alm-footer-container alm-footer-grid">
+
+            <div class="alm-footer-column">
+                <div class="alm-footer-brand">
+                    <img
+                        class="alm-footer-logo"
+                        src="assets/images/oskar-almaa-logo.jpg"
+                        alt="شعار أوسكار ألمع"
+                        width="58"
+                        height="58"
+                    >
+                    <h2>أوسكار ألمع</h2>
+                </div>
+
+                <p class="alm-footer-description">
+                    منصة تجمع قاعات المناسبات ومقدمي خدمات
+                    الضيافة والتصوير والتنسيق، لتسهيل عملية
+                    المقارنة والحجز وإدارة تفاصيل المناسبة.
+                </p>
+
+                <div class="alm-footer-social">
+                    <a href="https://www.snapchat.com/add/Oskaralmaa" target="_blank" rel="noopener noreferrer" aria-label="سناب شات أوسكار ألمع">Snap</a>
+                    <a href="https://www.instagram.com/Oskaralmaa/" target="_blank" rel="noopener noreferrer" aria-label="إنستغرام أوسكار ألمع">Insta</a>
+                    <a href="https://www.tiktok.com/@user8736031818773" target="_blank" rel="noopener noreferrer" aria-label="تيك توك أوسكار ألمع">TikTok</a>
+                    <a href="https://www.youtube.com/@Oskaralmaa" target="_blank" rel="noopener noreferrer" aria-label="قناة يوتيوب أوسكار ألمع">YouTube</a>
+                </div>
+            </div>
+
+            <div class="alm-footer-column">
+                <h3>روابط سريعة</h3>
+
+                <ul class="alm-footer-links">
+                    <li>
+                        <a href="index.html">
+                            الرئيسية
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#services">
+                            الخدمات
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#services">
+                            أقسام الخدمات
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#contact">
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="alm-footer-column">
+                <h3>الخدمات</h3>
+
+                <ul class="alm-footer-links">
+                    <li><a href="#">قاعات المناسبات</a></li>
+                    <li><a href="#">تنسيق الحفلات</a></li>
+                    <li><a href="#">التصوير</a></li>
+                    <li><a href="#">الضيافة والبوفيه</a></li>
+                    <li><a href="#">الإضاءة والصوت</a></li>
+                </ul>
+            </div>
+
+            <div class="alm-footer-column">
+                <h3>معلومات التواصل</h3>
+
+                <div class="alm-footer-contact">
+                    <span>المملكة العربية السعودية</span>
+                    <span>الهاتف: <a href="tel:0550775703">0550775703</a></span>
+                    <span>نعمل طوال أيام الأسبوع</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="alm-footer-bottom">
+        <div class="alm-footer-container alm-footer-bottom-content">
+
+            <p>
+                جميع الحقوق محفوظة
+                &copy;
+                <span id="almCurrentYear"></span>
+                أوسكار ألمع
+            </p>
+
+            <div class="alm-footer-policies">
+                <a href="#">سياسة الخصوصية</a>
+                <a href="#">الشروط والأحكام</a>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+<button
+    class="alm-back-to-top"
+    id="almBackToTop"
+    type="button"
+    aria-label="العودة إلى أعلى الصفحة"
+>
+    ↑
+</button>
+
+<script>
+(function () {
+    "use strict";
+
+    const yearElement = document.getElementById("almCurrentYear");
+    const backToTopButton = document.getElementById("almBackToTop");
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+    if (!backToTopButton) {
+        return;
+    }
+
+    window.addEventListener("scroll", function () {
+        backToTopButton.classList.toggle(
+            "alm-visible",
+            window.scrollY > 450
+        );
+    });
+
+    backToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+})();
+</script>
+
+
+    <script>
+    (function () {
+        "use strict";
+
+        const searchForm = document.getElementById("homeSearchForm");
+        const heroVideo = document.getElementById("homeHeroVideo");
+        const governorateSelect = document.getElementById("eventGovernorate");
+        const citySelect = document.getElementById("eventCity");
+        const dateInput = document.getElementById("eventDate");
+        const searchResult = document.getElementById("homeSearchResult");
+        const selectedDate = document.getElementById("homeSelectedDate");
+        const bookNowButton = document.getElementById("homeBookNow");
+        const venueLocationInput = document.getElementById("venueLocation");
+        const bookingNotesInput = document.getElementById("bookingNotes");
+        const orderItems = document.getElementById("homeOrderItems");
+        const orderEmpty = document.getElementById("homeOrderEmpty");
+        const selectedServices = new Set();
+        let unavailableDates = new Set();
+
+        function startHeroVideo() {
+            if (!heroVideo) { return; }
+            heroVideo.muted = true;
+            heroVideo.defaultMuted = true;
+            const playback = heroVideo.play();
+            if (playback && typeof playback.catch === "function") {
+                playback.catch(function () {
+                    /* تبقى صورة poster ظاهرة حتى يسمح الجهاز بالتشغيل. */
+                });
+            }
+        }
+
+        startHeroVideo();
+        document.addEventListener("touchstart", startHeroVideo, { once: true, passive: true });
+        document.addEventListener("click", startHeroVideo, { once: true });
+
+        function selectedServicesLabel() {
+            return selectedServices.size
+                ? Array.from(selectedServices).join("، ")
+                : "لم تختر خدمات بعد";
+        }
+
+        function resetServiceControls(service) {
+            document.querySelectorAll(".home-service-card").forEach(function (card) {
+                if (card.dataset.service === service) {
+                    card.classList.remove("home-selected");
+                    const button = card.querySelector(".home-service-action");
+                    if (button) { button.textContent = button.dataset.addLabel || "أضف للطلب"; }
+                }
+            });
+            document.querySelectorAll(".home-artist-add").forEach(function (button) {
+                if (button.dataset.service === service) {
+                    button.classList.remove("home-selected");
+                    button.textContent = button.dataset.addLabel || "أضف للطلب";
+                }
+            });
+        }
+
+        function renderOrderSummary() {
+            orderItems.replaceChildren();
+            orderEmpty.hidden = selectedServices.size > 0;
+            selectedServices.forEach(function (service) {
+                const item = document.createElement("span");
+                const label = document.createElement("span");
+                const remove = document.createElement("button");
+                item.className = "home-order-item";
+                label.textContent = service;
+                remove.type = "button";
+                remove.className = "home-order-remove";
+                remove.textContent = "×";
+                remove.setAttribute("aria-label", "حذف " + service);
+                remove.addEventListener("click", function () {
+                    selectedServices.delete(service);
+                    resetServiceControls(service);
+                    renderOrderSummary();
+                    bookNowButton.disabled = !selectedServices.size || !searchForm.checkValidity();
+                });
+                item.append(label, remove);
+                orderItems.appendChild(item);
+            });
+        }
+
+        async function loadUnavailableDates() {
+            unavailableDates = new Set();
+            if (!citySelect.value) { return; }
+            try {
+                const response = await fetch(
+                    "data:application/json,%7B%22dates%22%3A%5B%5D%7D",
+                    { headers: { "Accept": "application/json" } }
+                );
+                if (response.ok) {
+                    const data = await response.json();
+                    unavailableDates = new Set(data.dates || []);
+                }
+            } catch (error) {
+                searchResult.textContent = "تعذر التحقق من توفر الموعد حاليًا. حاول مرة أخرى.";
+                searchResult.classList.add("home-visible");
+            }
+        }
+
+        function validateSelectedDate() {
+            const isUnavailable = unavailableDates.has(dateInput.value);
+            dateInput.setCustomValidity(isUnavailable ? "هذا الموعد غير متاح، اختر تاريخًا آخر." : "");
+            if (isUnavailable) {
+                searchResult.textContent = "هذا الموعد محجوز وغير متاح. يرجى اختيار تاريخ آخر.";
+                searchResult.classList.add("home-visible");
+                bookNowButton.disabled = true;
+                dateInput.scrollIntoView({ behavior: "smooth", block: "center" });
+                window.setTimeout(function () { dateInput.focus(); }, 450);
+            }
+            return !isUnavailable;
+        }
+
+        function formatDualDate(dateValue) {
+            if (!dateValue) { return null; }
+            const date = new Date(dateValue + "T12:00:00");
+            return {
+                gregorian: new Intl.DateTimeFormat("ar-SA-u-ca-gregory", {
+                    year: "numeric", month: "long", day: "numeric"
+                }).format(date),
+                hijri: new Intl.DateTimeFormat("ar-SA-u-ca-islamic-umalqura", {
+                    year: "numeric", month: "long", day: "numeric"
+                }).format(date)
+            };
+        }
+
+        function updateDualDate() {
+            const dualDate = formatDualDate(dateInput.value);
+            document.getElementById("homeDualDate").textContent = dualDate
+                ? "الميلادي: " + dualDate.gregorian + " | الهجري: " + dualDate.hijri
+                : "سيظهر التاريخ الهجري هنا بعد الاختيار";
+        }
+
+        const saudiCities = {
+            "منطقة الرياض": [
+                "الرياض", "الدرعية", "الخرج", "الدوادمي", "المجمعة", "القويعية",
+                "وادي الدواسر", "الأفلاج", "الزلفي", "شقراء", "حوطة بني تميم",
+                "عفيف", "الغاط", "السليل", "ضرما", "المزاحمية", "رماح", "ثادق",
+                "حريملاء", "الحريق", "مرات"
+            ],
+            "منطقة مكة المكرمة": [
+                "مكة المكرمة", "جدة", "الطائف", "القنفذة", "الليث", "رابغ", "خليص",
+                "الخرمة", "رنية", "تربة", "الجموم", "الكامل", "بحرة", "أضم",
+                "ميسان", "العرضيات", "المويه"
+            ],
+            "منطقة المدينة المنورة": [
+                "المدينة المنورة", "ينبع", "العلا", "المهد", "الحناكية", "بدر",
+                "خيبر", "العيص", "وادي الفرع"
+            ],
+            "منطقة القصيم": [
+                "بريدة", "عنيزة", "الرس", "المذنب", "البكيرية", "البدائع", "الأسياح",
+                "النبهانية", "الشماسية", "عيون الجواء", "رياض الخبراء", "ضرية",
+                "عقلة الصقور", "أبانات"
+            ],
+            "المنطقة الشرقية": [
+                "الدمام", "الخبر", "الظهران", "الأحساء", "الهفوف", "المبرز", "حفر الباطن",
+                "الجبيل", "القطيف", "الخفجي", "رأس تنورة", "بقيق", "النعيرية",
+                "قرية العليا", "العديد", "البيضاء"
+            ],
+            "منطقة عسير": [
+                "أبها", "خميس مشيط", "بيشة", "محايل عسير", "النماص", "أحد رفيدة",
+                "ظهران الجنوب", "سراة عبيدة", "رجال ألمع", "بلقرن", "تثليث", "المجاردة",
+                "بارق", "تنومة", "طريب", "البرك", "الحرجة"
+            ],
+            "منطقة تبوك": [
+                "تبوك", "الوجه", "ضباء", "تيماء", "أملج", "حقل", "البدع"
+            ],
+            "منطقة حائل": [
+                "حائل", "بقعاء", "الغزالة", "الشنان", "الحائط", "السليمي", "الشملي",
+                "موقق", "سميراء"
+            ],
+            "منطقة الحدود الشمالية": [
+                "عرعر", "رفحاء", "طريف", "العويقيلة"
+            ],
+            "منطقة جازان": [
+                "جازان", "صبيا", "أبو عريش", "صامطة", "بيش", "الدرب", "ضمد", "الريث",
+                "فرسان", "أحد المسارحة", "الحرث", "العارضة", "العيدابي", "الدائر",
+                "الطوال", "هروب", "فيفا"
+            ],
+            "منطقة نجران": [
+                "نجران", "شرورة", "حبونا", "بدر الجنوب", "يدمة", "ثار", "خباش"
+            ],
+            "منطقة الباحة": [
+                "الباحة", "بلجرشي", "المندق", "المخواة", "قلوة", "العقيق", "القرى",
+                "غامد الزناد", "الحجرة", "بني حسن"
+            ],
+            "منطقة الجوف": [
+                "سكاكا", "القريات", "دومة الجندل", "طبرجل"
+            ]
+        };
+
+        function addOption(select, value, label) {
+            const option = document.createElement("option");
+            option.value = value;
+            option.textContent = label;
+            select.appendChild(option);
+        }
+
+        function updateCities(selectedCity) {
+            const cities = saudiCities[governorateSelect.value] || [];
+
+            citySelect.replaceChildren();
+            addOption(
+                citySelect,
+                "",
+                cities.length ? "اختر المحافظة" : "اختر المدينة أولًا"
+            );
+            cities.forEach(function (city) {
+                addOption(citySelect, city, city);
+            });
+            citySelect.disabled = !cities.length;
+
+            if (selectedCity && cities.includes(selectedCity)) {
+                citySelect.value = selectedCity;
+            }
+        }
+
+        Object.keys(saudiCities).forEach(function (governorate) {
+            addOption(governorateSelect, governorate, governorate);
+        });
+
+        governorateSelect.addEventListener("change", function () {
+            updateCities("");
+            unavailableDates = new Set();
+            dateInput.value = "";
+            updateDualDate();
+        });
+
+        citySelect.addEventListener("change", async function () {
+            dateInput.value = "";
+            updateDualDate();
+            await loadUnavailableDates();
+        });
+
+        dateInput.addEventListener("change", function () {
+            updateDualDate();
+            validateSelectedDate();
+        });
+
+        const today = new Date();
+        const localToday = new Date(
+            today.getTime() - today.getTimezoneOffset() * 60000
+        ).toISOString().split("T")[0];
+        dateInput.min = localToday;
+
+        if (searchForm) {
+            searchForm.addEventListener("submit", async function (event) {
+                event.preventDefault();
+
+                const type = document.getElementById("eventType").value;
+                const governorate = governorateSelect.value;
+                const city = citySelect.value;
+                const date = document.getElementById("eventDate").value;
+
+                if (!type || !governorate || !city || !date) {
+                    searchResult.textContent = "يرجى تحديد نوع المناسبة والمدينة والمحافظة والتاريخ.";
+                    searchResult.classList.add("home-visible");
+                    return;
+                }
+
+                searchResult.textContent = "جاري التحقق من توفر الموعد...";
+                searchResult.classList.add("home-visible");
+                await loadUnavailableDates();
+                if (!validateSelectedDate()) { return; }
+
+                const dualDate = formatDualDate(date);
+                const formattedDate = dualDate.gregorian + " | " + dualDate.hijri;
+
+                searchResult.textContent = selectedServices.size
+                    ? "الموعد متاح. يمكنك الآن الضغط على زر للحجز والاستفسار."
+                    : "الموعد متاح. أضف الخدمة المطلوبة ثم اضغط للحجز والاستفسار.";
+                searchResult.classList.add("home-visible");
+                selectedDate.textContent = formattedDate + " — " + city + " — " + selectedServicesLabel();
+                bookNowButton.disabled = selectedServices.size === 0;
+
+                const query = new URLSearchParams({
+                    type: type,
+                    governorate: governorate,
+                    city: city,
+                    date: date
+                });
+                window.history.replaceState(null, "", "?" + query.toString() + "#services");
+                document.getElementById("homeBookingReady").scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+                if (!bookNowButton.disabled) {
+                    window.setTimeout(function () { bookNowButton.focus(); }, 450);
+                }
+            });
+        }
+
+        document.querySelectorAll(".home-category-button").forEach(function (button) {
+            button.addEventListener("click", function () {
+                const category = button.dataset.category;
+
+                document.querySelectorAll(".home-category-button").forEach(function (item) {
+                    item.classList.toggle("home-active", item === button);
+                });
+                document.querySelectorAll(".home-service-card").forEach(function (card) {
+                    card.hidden = category !== "all" && card.dataset.category !== category;
+                });
+            });
+        });
+
+        document.querySelectorAll(".home-service-card").forEach(function (card, index) {
+            const heading = card.querySelector("h3");
+            if (!heading) { return; }
+
+            const toggle = document.createElement("button");
+            const detailsId = "homeServiceDetails" + index;
+            toggle.type = "button";
+            toggle.className = "home-card-toggle";
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.setAttribute("aria-controls", detailsId);
+            toggle.innerHTML = '<span>عرض التفاصيل والخيارات</span><span class="home-card-toggle-arrow" aria-hidden="true">⌄</span>';
+            heading.insertAdjacentElement("afterend", toggle);
+            card.id = detailsId;
+
+            toggle.addEventListener("click", function () {
+                const isExpanded = card.classList.toggle("home-expanded");
+                toggle.setAttribute("aria-expanded", String(isExpanded));
+                toggle.querySelector("span").textContent = isExpanded
+                    ? "إخفاء التفاصيل والخيارات"
+                    : "عرض التفاصيل والخيارات";
+            });
+        });
+
+        function toggleRequestedItem(button, target, service, addLabel) {
+            if (selectedServices.has(service)) {
+                selectedServices.delete(service);
+                target.classList.remove("home-selected");
+                button.textContent = addLabel;
+            } else {
+                selectedServices.add(service);
+                target.classList.add("home-selected");
+                button.textContent = "تمت الإضافة — إزالة";
+            }
+
+            searchResult.textContent = selectedServices.size
+                ? "الخدمات المضافة للطلب (" + selectedServices.size + "): " + selectedServicesLabel()
+                : "لم تختر أي خدمة بعد. يمكنك إضافة أكثر من خدمة للطلب نفسه.";
+            searchResult.classList.add("home-visible");
+            renderOrderSummary();
+            if (searchForm.checkValidity()) {
+                searchForm.requestSubmit();
+            }
+        }
+
+        document.querySelectorAll(".home-service-action").forEach(function (button) {
+            button.dataset.addLabel = button.textContent.trim();
+            button.addEventListener("click", function () {
+                const card = button.closest(".home-service-card");
+                toggleRequestedItem(button, card, card.dataset.service, button.dataset.addLabel);
+            });
+        });
+
+        document.querySelectorAll(".home-artist-add").forEach(function (button) {
+            button.dataset.addLabel = button.textContent.trim();
+            button.addEventListener("click", function () {
+                toggleRequestedItem(button, button, button.dataset.service, button.dataset.addLabel);
+            });
+        });
+
+        bookNowButton.addEventListener("click", function () {
+            if (!selectedServices.size) {
+                searchResult.textContent = "أضف خدمة واحدة على الأقل قبل الانتقال إلى واتساب.";
+                searchResult.classList.add("home-visible");
+                document.getElementById("services").scrollIntoView({ behavior: "smooth" });
+                return;
+            }
+
+            if (!searchForm.checkValidity()) {
+                searchForm.reportValidity();
+                return;
+            }
+
+            const type = document.getElementById("eventType").value;
+            const governorate = governorateSelect.value;
+            const city = citySelect.value;
+            const date = dateInput.value;
+            if (!validateSelectedDate()) { return; }
+            const dualDate = formatDualDate(date);
+            const message = [
+                "السلام عليكم، أرغب في الحجز والاستفسار لدى أوسكار ألمع.",
+                "",
+                "الخدمات المطلوبة:",
+                ...Array.from(selectedServices).map(function (service) {
+                    return "- " + service;
+                }),
+                "نوع المناسبة: " + type,
+                "المدينة: " + governorate,
+                "المحافظة: " + city,
+                "تاريخ المناسبة الميلادي: " + dualDate.gregorian,
+                "تاريخ المناسبة الهجري: " + dualDate.hijri,
+                "موقع القاعة: " + (venueLocationInput.value || "يحدد لاحقًا"),
+                "ملاحظات الحجز: " + (bookingNotesInput.value.trim() || "لا توجد"),
+                "",
+                "فضلاً أفيدوني بالتوفر والتفاصيل."
+            ].join("\n");
+
+            window.location.href = "https://wa.me/966550775703?text=" + encodeURIComponent(message);
+        });
+
+        const initialQuery = new URLSearchParams(window.location.search);
+        const initialGovernorate = initialQuery.get("governorate") || "";
+        const initialCity = initialQuery.get("city") || "";
+
+        if (initialGovernorate in saudiCities) {
+            governorateSelect.value = initialGovernorate;
+            updateCities(initialCity);
+        }
+        document.getElementById("eventType").value = initialQuery.get("type") || "";
+        dateInput.value = initialQuery.get("date") || "";
+        updateDualDate();
+
+        if (
+            initialQuery.get("type") &&
+            initialGovernorate &&
+            initialCity &&
+            initialQuery.get("date")
+        ) {
+            searchForm.requestSubmit();
+        }
+
+    })();
+    </script>
+
+
+<script>
+(function () {
+    "use strict";
+    const CUSTOMER_KEY = "oskarAlmaaCustomer";
+    const BOOKINGS_KEY = "oskarAlmaaBookings";
+    const loginForm = document.getElementById("staticLoginForm");
+    const authModal = document.getElementById("almAuthModal");
+    const loginOpen = document.getElementById("almLoginOpen");
+    const authMessage = document.getElementById("staticAuthMessage");
+    const accountSummary = document.getElementById("staticAccountSummary");
+    const accountName = document.getElementById("staticAccountName");
+    const accountPhone = document.getElementById("staticAccountPhone");
+    const myBookingsLink = document.getElementById("staticMyBookings");
+    const logoutButton = document.getElementById("staticLogout");
+
+    function customer() {
+        try { return JSON.parse(localStorage.getItem(CUSTOMER_KEY)); }
+        catch (error) { return null; }
+    }
+
+    function refreshAccountUI() {
+        const savedCustomer = customer();
+        if (loginOpen) { loginOpen.hidden = Boolean(savedCustomer); }
+        if (accountSummary) { accountSummary.hidden = !savedCustomer; }
+        if (accountName) { accountName.textContent = savedCustomer ? savedCustomer.username : ""; }
+        if (accountPhone) { accountPhone.textContent = savedCustomer ? savedCustomer.phone : ""; }
+        if (myBookingsLink) { myBookingsLink.hidden = !savedCustomer; }
+        if (logoutButton) { logoutButton.hidden = !savedCustomer; }
+    }
+
+    if (loginForm) {
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const username = loginForm.elements.username.value.trim();
+            const phone = loginForm.elements.phone.value.replace(/\D/g, "");
+            if (!username || !/^05\d{8}$/.test(phone)) {
+                authMessage.textContent = "أدخل اسم مستخدم ورقم جوال سعودي صحيح.";
+                return;
+            }
+            localStorage.setItem(CUSTOMER_KEY, JSON.stringify({ username: username, phone: phone }));
+            authMessage.textContent = "تم تسجيل الدخول بنجاح.";
+            authModal.hidden = true;
+            document.body.style.overflow = "";
+            refreshAccountUI();
+        });
+    }
+
+    if (logoutButton) {
+        logoutButton.addEventListener("click", function () {
+            localStorage.removeItem(CUSTOMER_KEY);
+            refreshAccountUI();
+        });
+    }
+
+    const bookingButton = document.getElementById("homeBookNow");
+    if (bookingButton) {
+        bookingButton.addEventListener("click", function () {
+            const selected = Array.from(document.querySelectorAll(".home-order-item > span:first-child"))
+                .map(function (item) { return item.textContent; });
+            if (!selected.length) { return; }
+            const bookings = JSON.parse(localStorage.getItem(BOOKINGS_KEY) || "[]");
+            bookings.unshift({
+                reference: "LOCAL-" + Date.now().toString().slice(-8),
+                type: document.getElementById("eventType").value,
+                region: document.getElementById("eventGovernorate").value,
+                city: document.getElementById("eventCity").value,
+                date: document.getElementById("eventDate").value,
+                services: selected,
+                venue: document.getElementById("venueLocation").value || "يحدد لاحقًا",
+                notes: document.getElementById("bookingNotes").value || "لا توجد",
+                status: "تم إرسال الطلب عبر واتساب"
+            });
+            localStorage.setItem(BOOKINGS_KEY, JSON.stringify(bookings.slice(0, 50)));
+        }, true);
+    }
+
+    const contactForm = document.getElementById("homeContactForm");
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const message = [
+                "السلام عليكم، لدي استفسار من موقع أوسكار ألمع.",
+                "الاسم: " + contactForm.elements.name.value,
+                "الجوال: " + contactForm.elements.phone.value,
+                "الرسالة: " + contactForm.elements.message.value
+            ].join("\n");
+            window.location.href = "https://wa.me/966550775703?text=" + encodeURIComponent(message);
+        });
+    }
+
+    refreshAccountUI();
+})();
+</script>
+
+</body>
+</html>
